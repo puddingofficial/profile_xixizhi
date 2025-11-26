@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>个人介绍 — 你的名字</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#e6eef6;background:linear-gradient(180deg,#071024 0%,#02101a 100%);-webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:32px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#02101a;font-size:28px;box-shadow:0 8px 30px rgba(2,16,26,0.6)}
+    h1{margin:0;font-size:32px}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    nav{display:flex;gap:12px;margin-top:14px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+    nav a:hover{background:var(--glass);color:#fff}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,8,18,0.6);}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .section-title h2{margin:0;font-size:18px}
+    .pill{font-size:12px;color:var(--muted)}
+
+    ul.clean{padding-left:18px;margin:0}
+    .tag{display:inline-block;padding:6px 8px;margin:6px 6px 0 0;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);font-size:13px}
+
+    .media iframe, .media video{width:100%;border-radius:10px}
+    audio{width:100%;margin-top:8px}
+
+    .right-column .small{font-size:13px;color:var(--muted)}
+    .ach-list{list-style:none;padding:0;margin:0}
+    .ach-list li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr;}.right-column{order:2}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">你</div>
+      <div>
+        <h1 id="name">你的名字（示例：张三）</h1>
+        <p class="lead" id="tagline">光电/微电子研究者 · 喜欢写代码、设计电路与教学</p>
+        <nav>
+          <a href="#about">关于我</a>
+          <a href="#skills">特长与优势</a>
+          <a href="#achievements">成绩与荣誉</a>
+          <a href="#media">音视频</a>
+          <a href="#contact">联系方式</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card" id="main-left">
+        <div id="about" class="mb">
+          <div class="section-title"><h2>关于我</h2><span class="pill">兴趣 · 研究方向</span></div>
+          <!-- 请在下面替换或扩展文字，写成自然连贯的介绍（不要分点，若要分段也可）。 -->
+          <p>我是一名专注于光电与集成电路研究的学生/工程师，热衷于将器件物理与系统架构结合来解决工程问题。常年从事光电探测器、可重构芯片和芯片系统协同优化的研究，喜欢在实验室和代码之间切换，把理论变成可复现的工程成果。</p>
+        </div>
+
+        <div id="skills" class="mb">
+          <div class="section-title"><h2>特长与优势</h2><span class="pill">技能 · 工具</span></div>
+          <div>
+            <div class="tag">模拟/数字混合电路设计</div>
+            <div class="tag">芯片架构</div>
+            <div class="tag">Python / C / Verilog</div>
+            <div class="tag">EDA 工具（Cadence, Synopsys）</div>
+            <div class="tag">科研写作与项目管理</div>
+          </div>
+          <p style="margin-top:12px;color:var(--muted)">示例：我擅长从问题建模出发，做系统级到器件级的联合优化；善于在有限资源下实现低功耗、高性能的设计。教学与沟通能力也使我能在组会中将复杂问题讲清楚。</p>
+        </div>
+
+        <div id="achievements" class="mb">
+          <div class="section-title"><h2>成绩与成果</h2><span class="pill">论文 · 项目 · 获奖</span></div>
+          <ul class="ach-list">
+            <li><strong>2025</strong> — 在XX国际会议发表论文《基于XXX的可重构片上加速器》。</li>
+            <li><strong>2024</strong> — 参加清华大学XXX项目，负责芯片验证与系统集成，结果被采纳用于原型系统。</li>
+            <li><strong>2023</strong> — 获得国家三等奖学金 / 学院优秀学生干部等（示例）。</li>
+          </ul>
+        </div>
+
+        <div id="media" class="mb">
+          <div class="section-title"><h2>音视频（示例）</h2><span class="pill">展示 · 演讲</span></div>
+          <div class="media">
+            <!-- 音频：可替换为你的音频文件或外链 URL（mp3/wav） -->
+            <label class="small">音频简介（示例：教学片段 / 项目讲解）</label>
+            <audio controls>
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              你的浏览器不支持音频标签。
+            </audio>
+
+            <!-- 视频：把下面的 YouTube 链接替换为你的视频；或用本地 video 元素嵌入 mp4 -->
+            <label class="small" style="display:block;margin-top:10px">视频示例（演讲 / 项目演示）</label>
+            <div style="margin-top:8px">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- 如果需要本地 mp4 文件，取消注释并替换 src -->
+            <!--
+            <video controls>
+              <source src="./my-talk.mp4" type="video/mp4">
+            </video>
+            -->
+          </div>
+        </div>
+
+        <div id="portfolio" class="mb">
+          <div class="section-title"><h2>代表作品 & 链接</h2><span class="pill">GitHub · 论文 · 项目</span></div>
+          <ul class="clean">
+            <li><a href="#" target="_blank">GitHub / 仓库（替换为你的链接）</a></li>
+            <li><a href="#" target="_blank">Google Scholar / 论文列表（替换）</a></li>
+            <li><a href="#" target="_blank">在线演示 / 原型（替换）</a></li>
+          </ul>
+        </div>
+
+      </section>
+
+      <aside class="right-column">
+        <div class="card">
+          <div class="section-title"><h2>联系方式</h2><span class="pill">联系我</span></div>
+          <p class="small">邮箱：<a href="mailto:your.email@example.com">your.email@example.com</a></p>
+          <p class="small">电话：+86 138 0000 0000（示例）</p>
+          <p class="small">微信 / LinkedIn：替换为你的链接或二维码</p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-title"><h2>荣誉与证书</h2><span class="pill">示例</span></div>
+          <ul class="clean">
+            <li>2024 学业优秀奖学金（学院）</li>
+            <li>2023 国际会议最佳海报（示例）</li>
+            <li>XX 竞赛二等奖（示例）</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="section-title"><h2>快速下载</h2><span class="pill">导出 · 保存</span></div>
+          <p class="small">把当前页面另存为 HTML 文件（文件 -> 另存为），或复制本文件到你的项目中。若需要我帮你把页面打包成 zip 或 ppt，请告诉我具体内容与素材。</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year">2025</span> 你的名字。页面由可编辑的单页 HTML 构建，适合放在 GitHub Pages 或任意静态站点托管。</div>
+    </footer>
+  </div>
+
+  <script>
+    // 小脚本：自动更新时间
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 可扩展：如果想要把某些占位符替换为本地存储内容，可在此加入代码。
+  </script>
+</body>
+</html>
